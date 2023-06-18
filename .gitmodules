@@ -1,0 +1,8 @@
+[submodule "Flex"]
+	path = Flex
+	url = https://github.com/jonapoul/Flex
+	branch = master
+[submodule "pelican-plugins"]
+	path = pelican-plugins
+	url = https://github.com/getpelican/pelican-plugins/
+	branch = master

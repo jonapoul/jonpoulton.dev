@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: ["master"]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Build and Publish
+        uses: nelsonjchen/gh-pages-pelican-action@0.2.0
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GH_PAGES_BRANCH: master
+          GH_PAGES_CNAME: jonpoulton.dev
+          PELICAN_CONFIG_FILE: pelicanconf.py
+          PELICAN_CONTENT_FOLDER: content
