@@ -16,6 +16,7 @@ mdurl==0.1.2
 ordered-set==4.1.0
 pelican==4.9.1
 pelican-related-posts==1.0.0
+pelican-seo==1.2.2
 pelican-youtube==0.2.1
 pelicanfly==0.4.4
 Pygments==2.17.2

@@ -44,12 +44,17 @@ PLUGINS = [
     "always_modified",
     "i18n_subsites",
     "post_stats",
+    "seo",
 ]
 
 # Plugin Conf
 ALWAYS_MODIFIED = True
 DEFAULT_PAGINATION = 5
 DISPLAY_PAGES_ON_MENU = True
+SEO_REPORT = True  # SEO report is enabled by default
+SEO_ENHANCER = True  # SEO enhancer is disabled by default
+SEO_ENHANCER_OPEN_GRAPH = True # Subfeature of SEO enhancer
+SEO_ENHANCER_TWITTER_CARDS = True # Subfeature of SEO enhancer
 SUMMARY_MAX_LENGTH = 175
 
 # Feed generation is usually not desired when developing
