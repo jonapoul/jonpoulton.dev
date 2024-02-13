@@ -4,6 +4,11 @@ on:
   push:
     branches: ["master"]
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+permissions: write-all
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -15,9 +20,5 @@ jobs:
 
       - name: Build and Publish
         uses: nelsonjchen/gh-pages-pelican-action@0.2.0
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          GH_PAGES_BRANCH: master
+        with:
           GH_PAGES_CNAME: jonpoulton.dev
-          PELICAN_CONFIG_FILE: pelicanconf.py
-          PELICAN_CONTENT_FOLDER: content
