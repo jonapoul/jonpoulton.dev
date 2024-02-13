@@ -57,12 +57,14 @@ SEO_ENHANCER_OPEN_GRAPH = True # Subfeature of SEO enhancer
 SEO_ENHANCER_TWITTER_CARDS = True # Subfeature of SEO enhancer
 SUMMARY_MAX_LENGTH = 175
 
-# Feed generation is usually not desired when developing
+# RSS Feed
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+FEED_MAX_ITEMS = 20
+FEED_ALL_ATOM = 'feeds/all.atom.xml'
 
 # Links
 LINKS = (
@@ -79,9 +81,10 @@ MENUITEMS = (
 
 # Social widgets
 SOCIAL = (
-    ("envelope", "mailto:jpoulton (AT) pm.me"),
     ("github", "https://github.com/jonapoul"),
     ("linkedin", "https://www.linkedin.com/in/jon-poulton-6a59111a4/"),
+    ("envelope", "mailto:jpoulton (AT) pm.me"),
+    ("rss", "feeds/all.atom.xml"),
 )
 
 # License
