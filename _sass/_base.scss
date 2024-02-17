@@ -276,6 +276,14 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+.forename {
+  color: var(--global-forename-color) !important;
+}
+
+.surname {
+  color: var(--global-surname-color) !important;
+}
+
 .navbar.navbar-light {
   a {
     &:hover {
@@ -386,7 +394,7 @@ ul.task-list input[type="checkbox"] {
 
     a {
       i::before {
-        color: var(--global-text-color);
+        color: var(--global-theme-color);
         transition-property: all 0.2s ease-in-out;
       }
 
@@ -535,6 +543,7 @@ footer.sticky-bottom {
 }
 
 .post-title {
+  color: var(--global-theme-color);
   mjx-container[jax="CHTML"][display="true"] {
     display: unset;
   }

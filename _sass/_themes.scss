@@ -7,14 +7,17 @@
   --global-code-bg-color: #{$code-bg-color-light};
   --global-text-color: #{$black-color};
   --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$purple-color};
-  --global-hover-color: #{$purple-color};
+  --global-theme-color: #{$blue-color-dark};
+  --global-hover-color: #{$blue-color};
   --global-hover-text-color: #{$white-color};
   --global-footer-bg-color: #{$grey-color-dark};
   --global-footer-text-color: #{$grey-color-light};
   --global-footer-link-color: #{$white-color};
   --global-divider-color: rgba(0, 0, 0, 0.1);
   --global-card-bg-color: #{$white-color};
+
+  --global-forename-color: #{$red-color-dark};
+  --global-surname-color: #{$red-color-dark};
 
   --global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;
@@ -59,6 +62,9 @@ html[data-theme="dark"] {
   --global-footer-link-color: #{$black-color};
   --global-divider-color: #424246;
   --global-card-bg-color: #{$grey-900};
+
+  --global-forename-color: #{$red-color};
+  --global-surname-color: #{$red-color};
 
   --global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;
