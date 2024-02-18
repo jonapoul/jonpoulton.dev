@@ -2,10 +2,10 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: blank # the website title (if blank, full name will be used instead)
+title: Jon Poulton
 first_name: Jon
 last_name: Poulton
-description: Personal website of Jon Poulton, Android & ATAK software engineer
+description: Android & ATAK software engineer - projects and personal blog
 footer_text: Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 keywords: android, developer, software, engineer, senior, atak, tak, app, plugin
 lang: en
