@@ -3,20 +3,6 @@ name: Deploy site
 on:
   push:
     branches:
-      - master
-      - main
-    paths:
-      - "assets/**"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
-      - "**/*.md"
-      - "**.yml"
-      - "!.github/workflows/*.yml"
-      - "!README.md"
-  pull_request:
-    branches:
-      - master
       - main
     paths:
       - "assets/**"

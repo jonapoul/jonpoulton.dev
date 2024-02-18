@@ -3,19 +3,6 @@ name: Check for broken links
 on:
   push:
     branches:
-      - master
-      - main
-    paths:
-      - "assets/**"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
-      - "**/*.md"
-      - "**.yml"
-      - "!.github/workflows/*.yml"
-  pull_request:
-    branches:
-      - master
       - main
     paths:
       - "assets/**"
