@@ -32,9 +32,9 @@ and here's some inline `mutableMapOf()`.
 ## Data
 
 | Header 1 | Number 2 |
-|:--:|:--:|
-| Foo | `bar` |
-| Quz | `qux` |
+| :------: | :------: |
+|   Foo    |  `bar`   |
+|   Quz    |  `qux`   |
 
 ## Summary
 
