@@ -278,10 +278,12 @@ ul.task-list input[type="checkbox"] {
 
 .forename {
   color: var(--global-forename-color) !important;
+  font-weight: bolder;
 }
 
 .surname {
   color: var(--global-surname-color) !important;
+  font-weight: bolder;
 }
 
 .navbar.navbar-light {
@@ -293,6 +295,8 @@ ul.task-list input[type="checkbox"] {
 
   .navbar-brand {
     color: var(--global-text-color);
+    font-weight: 700;
+    text-transform: uppercase;
   }
 
   .navbar-nav .nav-item .nav-link {
@@ -394,7 +398,7 @@ ul.task-list input[type="checkbox"] {
 
     a {
       i::before {
-        color: var(--global-theme-color);
+        color: var(--global-text-color);
         transition-property: all 0.2s ease-in-out;
       }
 
@@ -518,8 +522,14 @@ footer.sticky-bottom {
   padding-bottom: 3rem;
 
   h1 {
-    color: var(--global-theme-color);
+    color: var(--global-title-color);
     font-size: 5rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    color: var(--global-text-color) !important;
+    font-weight: 400;
   }
 }
 
@@ -543,7 +553,9 @@ footer.sticky-bottom {
 }
 
 .post-title {
-  color: var(--global-theme-color);
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: var(--global-title-color);
   mjx-container[jax="CHTML"][display="true"] {
     display: unset;
   }
@@ -571,6 +583,13 @@ footer.sticky-bottom {
       font-size: 0.875rem;
       padding-top: 0.25rem;
       padding-bottom: 0;
+    }
+
+    h3 {
+      .post-title {
+        font-size: 2.0rem !important;;
+        color: var(--global-title-color);
+      }
     }
 
     a {
