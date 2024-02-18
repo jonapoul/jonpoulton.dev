@@ -13,18 +13,6 @@ on:
       - "**.yml"
       - "!.github/workflows/*.yml"
       - "!README.md"
-  pull_request:
-    branches:
-      - main
-    paths:
-      - "assets/**"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
-      - "**/*.md"
-      - "**.yml"
-      - "!.github/workflows/*.yml"
-      - "!README.md"
   workflow_dispatch:
 
 permissions:
