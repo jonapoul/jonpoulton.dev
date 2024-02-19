@@ -101,8 +101,33 @@ jobs:
           # only check local links
           args: --offline --remap '_site(/?.*)/assets/(.*) _site/assets/$2' --verbose --no-progress '_site/**/*.html'
 
-  deploy:
+  mock-deploy:
     runs-on: ubuntu-latest
+    if: github.ref != 'refs/heads/main'
+    needs: [prettier, link-checker, check-links-on-site]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2.2"
+          bundler-cache: true
+
+      - name: Install and Build
+        run: |
+          export JEKYLL_ENV=production
+          bundle exec jekyll build --lsi
+
+      - name: Purge unused CSS
+        run: |
+          npm install -g purgecss
+          purgecss -c purgecss.config.js
+
+  actual-deploy:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
     needs: [prettier, link-checker, check-links-on-site]
     steps:
       - name: Checkout
@@ -125,7 +150,6 @@ jobs:
           purgecss -c purgecss.config.js
 
       - name: Deploy
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
