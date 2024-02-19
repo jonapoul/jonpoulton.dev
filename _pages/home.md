@@ -12,4 +12,6 @@ latest_posts: true
 social: true
 ---
 
-Android engineer, ATAK plugin developer, Dexter's Lab aficionado
+- Android engineer
+- ATAK plugin developer
+- Dexter's Lab aficionado
