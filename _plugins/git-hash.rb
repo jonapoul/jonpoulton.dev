@@ -33,7 +33,8 @@ class Jekyll::GitHashGenerator < Generator
   priority :high
   safe true
   def generate(site)
-    hash = `git rev-parse --short HEAD`.strip
+    # This was using a --short flag, I've taken it out
+    hash = `git rev-parse HEAD`.strip
     site.data['hash'] = hash
   end
 end
