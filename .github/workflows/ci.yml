@@ -101,7 +101,7 @@ jobs:
   mock-deploy:
     runs-on: ubuntu-latest
     if: github.ref != 'refs/heads/main'
-    needs: [prettier, link-checker, check-links-on-site]
+    needs: [prettier, check-links-remote, check-links-local]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -125,7 +125,7 @@ jobs:
   actual-deploy:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
-    needs: [prettier, link-checker, check-links-on-site]
+    needs: [prettier, check-links-remote, check-links-local]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
