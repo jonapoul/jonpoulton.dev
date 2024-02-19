@@ -29,7 +29,7 @@
 #
 # Author: Yegor Bugayenko <yegor@tpc2.com>
 # Source: http://github.com/yegor256/jekyll-git-hash
-class Jekyll::GitHashGenerator < Generator
+class Jekyll::GitHashGenerator < Jekyll::Generator
   priority :high
   safe true
   def generate(site)
