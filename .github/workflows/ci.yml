@@ -59,6 +59,8 @@ jobs:
         uses: lycheeverse/lychee-action@v1.9.0
         with:
           fail: true
+          # removed md files that include liquid tags
+          args: --exclude-path --verbose --no-progress './**/*.md' './**/*.html'
 
   check-links-local:
     runs-on: ubuntu-latest
