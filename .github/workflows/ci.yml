@@ -50,7 +50,7 @@ jobs:
           event-type: prettier-failed-on-pr
           client-payload: '{"pr_number": "${{ github.event.number }}", "artifact_url": "${{ steps.artifact-upload.outputs.artifact-url }}", "run_id": "${{ github.run_id }}"}'
 
-  link-checker:
+  check-links-remote:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -59,10 +59,8 @@ jobs:
         uses: lycheeverse/lychee-action@v1.9.0
         with:
           fail: true
-          # removed md files that include liquid tags
-          args: --exclude-path README.md --exclude-path _pages/404.md --exclude-path _pages/blog.md --verbose --no-progress './**/*.md' './**/*.html'
 
-  check-links-on-site:
+  check-links-local:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -98,7 +96,6 @@ jobs:
         uses: lycheeverse/lychee-action@v1.9.0
         with:
           fail: true
-          # only check local links
           args: --offline --remap '_site(/?.*)/assets/(.*) _site/assets/$2' --verbose --no-progress '_site/**/*.html'
 
   mock-deploy:
