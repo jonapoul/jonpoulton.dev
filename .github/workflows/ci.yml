@@ -60,7 +60,7 @@ jobs:
         with:
           fail: true
           # removed md files that include liquid tags
-          args: --exclude-path --verbose --no-progress './**/*.md' './**/*.html'
+          args: --exclude-path README.md --exclude-path _pages/404.md --exclude-path _pages/blog.md --verbose --no-progress './**/*.md' './**/*.html'
 
   check-links-local:
     runs-on: ubuntu-latest
